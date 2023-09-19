@@ -17,7 +17,30 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+
 Route::get('/', function () {
     // return view('welcome');
-    return view('pages.blank-page', ['type_menu' => '']);
+    return view('pages.dashboard-general-dashboard', ['type_menu' => 'dashboard']);
     });
+
+Route::get('/login', function () {
+    // return view('welcome');
+    return view('pages.auth-login');
+    })->name("login");
+
+    
+Route::get('/register', function () {
+    // return view('welcome');
+    return view('pages.auth-register');
+    })->name("register");
+
+Route::get('/reset', function () {
+        // return view('welcome');
+        return view('pages.auth-reset-password');
+        })->name("reset");
+
+Route::get('/forgot', function () {
+    // return view('welcome');
+    return view('pages.auth-forgot-password');
+    })->name("forgot");
+    
