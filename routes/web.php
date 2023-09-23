@@ -17,7 +17,40 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+Route::middleware(['auth'])->group(function(){
+    
+    Route::get('home', function () {
+        return view('pages.app.dashboard-siakad', ['type_menu' => 'dashboard']);
+        })->name("home");
+});
+
+
+
 Route::get('/', function () {
     // return view('welcome');
-    return view('pages.blank-page', ['type_menu' => '']);
-    });
+    // return view('pages.app.dashboard-siakad', ['type_menu' => 'dashboard']);
+    return view('pages.auth.auth-login');
+        
+});
+
+// Route::get('/login', function () {
+//     // return view('welcome');
+//     return view('pages.auth.auth-login');
+//     })->name("login");
+
+    
+// Route::get('/register', function () {
+//     // return view('welcome');
+//     return view('pages.auth.auth-register');
+//     })->name("register");
+
+// Route::get('/reset', function () {
+//         // return view('welcome');
+//         return view('pages.auth.auth-reset-password');
+//         })->name("reset");
+
+// Route::get('/forgot', function () {
+//     // return view('welcome');
+//     return view('pages.auth.auth-forgot-password');
+//     })->name("forgot");
+    
