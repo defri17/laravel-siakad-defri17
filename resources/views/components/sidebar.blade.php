@@ -22,27 +22,20 @@
                     </li>
                 </ul>
             </li>
-            <li class="menu-header">Starter</li>
-            <li class="nav-item dropdown {{ $type_menu === 'layout' ? 'active' : '' }}">
+            {{-- <li class="menu-header">Starter</li> --}}
+            <li class="nav-item dropdown {{ $type_menu === 'users' ? 'active' : '' }}">
                 <a href="#"
                     class="nav-link has-dropdown"
-                    data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Layout</span></a>
+                    data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Users</span></a>
                 <ul class="dropdown-menu">
                     <li class="{{ Request::is('layout-default-layout') ? 'active' : '' }}">
                         <a class="nav-link"
-                            href="{{ url('layout-default-layout') }}">Default Layout</a>
+                            href="{{ route('users.index') }}">List User</a>
                     </li>
-                    <li class="{{ Request::is('transparent-sidebar') ? 'active' : '' }}">
-                        <a class="nav-link"
-                            href="{{ url('transparent-sidebar') }}">Transparent Sidebar</a>
-                    </li>
-                    <li class="{{ Request::is('layout-top-navigation') ? 'active' : '' }}">
-                        <a class="nav-link"
-                            href="{{ url('layout-top-navigation') }}">Top Navigation</a>
-                    </li>
+
                 </ul>
             </li>
-            <li class="{{ Request::is('blank-page') ? 'active' : '' }}">
+            {{-- <li class="{{ Request::is('blank-page') ? 'active' : '' }}">
                 <a class="nav-link"
                     href="{{ url('blank-page') }}"><i class="far fa-square"></i> <span>Blank Page</span></a>
             </li>
@@ -210,21 +203,6 @@
                     </li>
                 </ul>
             </li>
-            {{-- <li class="nav-item dropdown">
-                <a href="#"
-                    class="nav-link has-dropdown"><i class="fas fa-map-marker-alt"></i> <span>Google
-                        Maps</span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="gmaps-advanced-route.html">Advanced Route</a></li>
-                    <li><a href="gmaps-draggable-marker.html">Draggable Marker</a></li>
-                    <li><a href="gmaps-geocoding.html">Geocoding</a></li>
-                    <li><a href="gmaps-geolocation.html">Geolocation</a></li>
-                    <li><a href="gmaps-marker.html">Marker</a></li>
-                    <li><a href="gmaps-multiple-marker.html">Multiple Marker</a></li>
-                    <li><a href="gmaps-route.html">Route</a></li>
-                    <li><a href="gmaps-simple.html">Simple</a></li>
-                </ul>
-            </li> --}}
             <li class="nav-item dropdown {{ $type_menu === 'modules' ? 'active' : '' }}">
                 <a href="#"
                     class="nav-link has-dropdown"><i class="fas fa-plug"></i> <span>Modules</span></a>
@@ -389,6 +367,6 @@
                 class="btn btn-primary btn-lg btn-block btn-icon-split">
                 <i class="fas fa-rocket"></i> Documentation
             </a>
-        </div>
+        </div> --}}
     </aside>
 </div>
