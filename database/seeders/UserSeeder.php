@@ -16,11 +16,15 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         //
-        \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(100)->create();
         DB::table('users')->insert([
             'name' => 'AKHMAD DEFRIANI',
             'email' => 'akhmaddefriani17@gmail.com',
+            'email_verified_at' => now(),
+            
             'password' => Hash::make('password'),
+            'roles' => 'mahasiswa',
+            
         ]);    
     }
 }

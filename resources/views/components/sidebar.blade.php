@@ -8,7 +8,7 @@
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
-            <li class="nav-item dropdown {{ $type_menu === 'dashboard' ? 'active' : '' }}">
+            <li class="nav-item dropdown ">
                 <a href="#"
                     class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
                 <ul class="dropdown-menu">
@@ -23,7 +23,7 @@
                 </ul>
             </li>
             {{-- <li class="menu-header">Starter</li> --}}
-            <li class="nav-item dropdown {{ $type_menu === 'users' ? 'active' : '' }}">
+            <li >
                 <a href="#"
                     class="nav-link has-dropdown"
                     data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Users</span></a>
